@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://kactus" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="KGnSmenwWCF" targetNamespace="http://kactus" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://kactus/Imports">
+      <xsd:import schemaLocation="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?xsd=xsd0" namespace="http://kactus" />
+      <xsd:import schemaLocation="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IKGnSmenwWCF_AS_ApplyUpdates_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_ApplyUpdates" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_ApplyUpdates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_ApplyUpdatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetRecords" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_DataRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_DataRequest" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_DataRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_DataRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetProviderNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetProviderNames" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetProviderNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetProviderNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetParams" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_RowRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_RowRequest" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_RowRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_RowRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_Execute_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_Execute" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_Execute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_ExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_ExecRemoteFunction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecRemoteFunction" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_ExecRemoteFunction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecRemoteFunctionResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IKGnSmenwWCF">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_ApplyUpdates">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_ApplyUpdates" message="tns:IKGnSmenwWCF_AS_ApplyUpdates_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_ApplyUpdatesResponse" message="tns:IKGnSmenwWCF_AS_ApplyUpdates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_GetRecords">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetRecords" message="tns:IKGnSmenwWCF_AS_GetRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetRecordsResponse" message="tns:IKGnSmenwWCF_AS_GetRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_DataRequest">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_DataRequest" message="tns:IKGnSmenwWCF_AS_DataRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_DataRequestResponse" message="tns:IKGnSmenwWCF_AS_DataRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_GetProviderNames">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetProviderNames" message="tns:IKGnSmenwWCF_AS_GetProviderNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetProviderNamesResponse" message="tns:IKGnSmenwWCF_AS_GetProviderNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_GetParams">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetParams" message="tns:IKGnSmenwWCF_AS_GetParams_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetParamsResponse" message="tns:IKGnSmenwWCF_AS_GetParams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_RowRequest">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_RowRequest" message="tns:IKGnSmenwWCF_AS_RowRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_RowRequestResponse" message="tns:IKGnSmenwWCF_AS_RowRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_Execute">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_Execute" message="tns:IKGnSmenwWCF_AS_Execute_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_ExecuteResponse" message="tns:IKGnSmenwWCF_AS_Execute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ExecRemoteFunction">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/ExecRemoteFunction" message="tns:IKGnSmenwWCF_ExecRemoteFunction_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/ExecRemoteFunctionResponse" message="tns:IKGnSmenwWCF_ExecRemoteFunction_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="KGnSmenwWCF">
+    <wsdl:port name="NetTcpBinding_IKGnSmenwWCF" binding="i0:NetTcpBinding_IKGnSmenwWCF">
+      <soap12:address location="net.tcp://dwktest.digitalware.com.co/Kactus/KactusCoreServices/KGnSmenw.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://dwktest.digitalware.com.co/Kactus/KactusCoreServices/KGnSmenw.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IKGnSmenwWCF" binding="i0:WSHttpBinding_IKGnSmenwWCF">
+      <soap12:address location="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc/ws" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc/ws</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

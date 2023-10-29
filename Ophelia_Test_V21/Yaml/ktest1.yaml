@@ -1,0 +1,86 @@
+resources:
+- repo: self
+  clean: true
+queue:
+  name: Ktest1
+  timeoutInMinutes: 1200
+  cancelTimeoutInMinutes: 1200 
+  demands: 
+  - msbuild
+  - visualstudio
+  
+#jobs:
+#- job: Test
+#  timeoutInMinutes: 1200 # how long to run the job before automatically cancelling
+#  cancelTimeoutInMinutes: 1200 # how much time to give 'run always even if cancelled tasks' before stopping them
+
+
+
+#La canalización de compilación hace referencia a la variable "buildPlatform", que ha seleccionado que se establezca en el momento de poner en cola. Cree o edite la canalización de compilación para este archivo YAML, defina la variable en la pestaña Variables y, a continuación, seleccione la opción para poder establecerla en el momento de poner en cola. Consulte https://go.microsoft.com/fwlink/?linkid=865971
+#La canalización de compilación hace referencia a la variable "buildConfiguration", que ha seleccionado que se establezca en el momento de poner en cola. Cree o edite la canalización de compilación para este archivo YAML, defina la variable en la pestaña Variables y, a continuación, seleccione la opción para poder establecerla en el momento de poner en cola. Consulte https://go.microsoft.com/fwlink/?linkid=865971
+steps:
+- task: NuGetCommand@2
+  displayName: 'NuGet restore'
+
+
+- task: VSBuild@1
+  displayName: Compilar
+  inputs:
+    vsVersion: 15.0
+    
+    solution: '$(System.DefaultWorkingDirectory)\*.sln'
+    
+    msbuildArgs: '/p:OutDir="$(build.binariesdirectory)\\"'
+
+    platform: '$(buildPlatform)'
+
+    configuration: '$(buildConfiguration)'
+
+    restoreNugetPackages: true
+
+
+- task: CmdLine@1
+  displayName: ActualizaTablaOrdenExecutionDatos
+  inputs:
+    filename: '\\KTFP1\XMLTestExecution\TargeCases.exe'
+
+    arguments: '"MaestrosPrueba1" "237"'
+
+  enabled: false
+
+- task: VisualStudioTestPlatformInstaller@1
+  displayName: 'Instalador de Visual Studio Test Platform'
+  inputs:
+    versionSelector: latestStable
+
+
+- task: VSTest@2
+  displayName: MaestrospruebasSP105
+  enabled: false
+  inputs:
+    testSelector: testPlan
+
+    testPlan: 4
+
+    testSuite: '20640'
+
+    testConfiguration: 1
+
+    searchFolder: '$(build.binariesdirectory)'
+
+    uiTests: true
+
+    runSettingsFile: 'testsettings4.testsettings'
+
+    runTestsInIsolation: true
+
+    codeCoverageEnabled: false
+
+    publishRunAttachments: false
+
+    diagnosticsEnabled: false
+
+    rerunFailedTests: false
+
+
+-

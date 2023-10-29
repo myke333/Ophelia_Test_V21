@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://kactus" elementFormDefault="qualified" targetNamespace="http://kactus" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="AS_ApplyUpdates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Delta" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="MaxErrors" type="xs:int" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_ApplyUpdatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AS_ApplyUpdatesResult" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="ErrorCount" type="xs:int" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_GetRecords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Count" type="xs:int" />
+        <xs:element minOccurs="0" name="Options" type="xs:int" />
+        <xs:element minOccurs="0" name="CommandText" nillable="true" type="xs:string" />
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q1:ArrayOfanyType" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_GetRecordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AS_GetRecordsResult" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="RecsOut" type="xs:int" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q2:ArrayOfanyType" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_DataRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Data" nillable="true" type="q3:ArrayOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_DataRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AS_DataRequestResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_GetProviderNames">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_GetProviderNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AS_GetProviderNamesResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_GetParams">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_GetParamsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AS_GetParamsResult" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_RowRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Row" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="RequestType" type="xs:int" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_RowRequestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AS_RowRequestResult" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_Execute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CommandText" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Params" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AS_ExecuteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Params" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecRemoteFunction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pStMetodo" nillable="true" type="xs:string" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDataIn" nillable="true" type="q4:ArrayOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExecRemoteFunctionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExecRemoteFunctionResult" type="xs:int" />
+        <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDataOut" nillable="true" type="q5:ArrayOfanyType" />
+        <xs:element minOccurs="0" name="pStError" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

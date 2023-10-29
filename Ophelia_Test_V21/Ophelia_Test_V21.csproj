@@ -1,0 +1,1914 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A587205F-4033-4EEF-AA29-2547BAF2D90E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ophelia_Test_V21</RootNamespace>
+    <AssemblyName>Ophelia_Test_V21</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Appium.Net, Version=4.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Appium.WebDriver.4.3.2\lib\net45\Appium.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ophelia, Version=22.9.2.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\administracion\Ophelia\OpheliaLibs\Ophelia.dll</HintPath>
+    </Reference>
+    <Reference Include="SeleniumExtras.PageObjects, Version=3.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetSeleniumExtras.PageObjects.3.11.0\lib\net45\SeleniumExtras.PageObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Packaging.4.7.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.141.0\lib\net45\WebDriver.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AFuncionesGlobales\AbrirPrograma.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudAcproas.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacmaans.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacpaans.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacparac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacparam.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacplanh.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacplant.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacprogp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbidepcc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbientre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiincin.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiProex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiregru.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiseaum.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbivadve.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbPapre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpcapah.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpcapre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpcapss.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKBpGaabo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpgamop.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpgapca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpgapma.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpgappa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpgapre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpgapsa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudkbpHiinc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpliqps.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpmzmod.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpproto.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbprfacc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbprsald.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpsolpr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpsopre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbptipbe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosCo\CrudKcomonit.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3moca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3paco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKEd3Pcoe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3Pcop.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKEd3Pirc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKEd3rcom.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKedGrafi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKedimeta.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKedometa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKedrjeas.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdhforo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdpmale.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGd\CrudKgdpepem.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGe\CrudKgeareas.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGe\CrudKgepbsca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnaccaj.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnalert.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnaniv2.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnappar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnappla.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgncalen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgncamar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgncpusu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgncword.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgndtdtl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnejpla.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnflutl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgngpiob.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnitems.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnItmed.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnLangu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnmarco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnmgmen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnnomen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnpaitm.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnpakac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnPlaud.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnSdsad.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnTapla.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnuproc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn_2\CrudKGnLnesp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn_2\CrudKGnRepfr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn_2\CrudKGnSeweb.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosIG\CrudKigpindm.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmlitss.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmhsupa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrelcc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmaccat.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmactct.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmagruc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudEd3pilc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3pcco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3plcc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CurdKedpmoev.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmaplva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmaret1.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmasfhe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcaban.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcabon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcacsj.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcahex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcalhe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcaltu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcamid.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcapre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmccofv.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmccont.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcentp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcesan.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcespa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcgrex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcinca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcinct.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcisri.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcmaco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcnobr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcoapl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcoces.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcodis.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcogru.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcomps.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmcppen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmctimp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\crudKnmdgapo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmdinoc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmdisga.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmdispr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmdmere.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmdnecp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmdnpcn.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmecpre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmgperi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmgsrof.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmicprz.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmifina.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnminome.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnminyre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmlctsa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmliccs.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmlinoe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmliptu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmliqhe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmmdeja.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmmefna.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmmgeco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmnepar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmnivel.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmnoeco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmnoema.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmnonda.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmpacnt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmpadef.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmpante.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmpaple.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmpasfe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmpavfc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmpdane.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmpeapl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmpefie.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmperan.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmperio.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmploc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmprsru.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmPrvec.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrinfs.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrnocc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrnoci.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrnoel.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrpate.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrpcon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrpept.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrprem.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrrfms.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmrvate.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmsapcc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmsuent.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmsuppg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmtrasl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_10\CrudKnmulgpa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmantce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmbonif.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmcacti.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmcamji.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmcarrr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmcomob.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmcpafs.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmdecos.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmdpcol.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmfaliq.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmfapge.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmfasop.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmgafil.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmgcxps.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmgenmg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmGrutu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmhdeco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmHenca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmhmovc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmicspr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmliqct.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmMemgt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmmempt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmmgbbe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmmodal.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmMohoe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmmovto.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmmseju.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmPaupc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmpauso.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmprdju.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrarie.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrbare.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrcoco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrcoen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmmpfie.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmncdiv.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmncrco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmpagno.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmpahoc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmpasyp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmplcem.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmpreli.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmprite.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrboni.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrcalt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrcedi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrcese.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmRctrl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmRdalt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmRdane.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmRdaya.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrdeas.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmRdegv.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrdess.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmReapd.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmreing.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmRemmd.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmresuv.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmRicsa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmRicts.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrirfu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrmuse.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrnoca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmronin.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmropcr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrpcco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrprga.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrproa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmRproc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrprub.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmrtisu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmsolct.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmSubcc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmtaral.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmtargp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmtarif.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmNconc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmPauen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmProvar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmRconc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmRdega.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmthems.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKNmTinte.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_11\CrudKnmviani.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKNmAbemp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKNmCaccf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKnmccdep.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKnmCdtor.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKnmcotra.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKNmCtano.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKNmDisce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKnmdptdo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKNmExsal.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKNmGruco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKnmhicar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKNmHmdem.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKnmjedes.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKNmNccla.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKNmPaire.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKnmRanck.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKnmrpico.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_12\CrudKnmsaldi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmbanpr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcodde.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmdindu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmarpls.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcaces.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcgrca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmchepn.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcofto.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcopro.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcpbla.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcrelm.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcrpla.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcsaba.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcsmam.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcuesi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmdespr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmdnpvp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmdocrl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmdpace.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmdpcon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmdpfdn.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmdphdn.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmdpred.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmempos.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmfafor.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmfanum.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmfnaci.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmgeins.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmgnheg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmgnhex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmgtcot.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmhccsf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmheemp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmhocof.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnminfsi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmirded.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmjefes.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmliqfp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmmgcit.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmmgsri.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmmprno.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpaces.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpacje.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpacon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpacot.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpaept.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpatur.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpemag.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpgnmg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpiess.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpro23.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmprple.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmprtso.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmpsfac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmranft.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmrbeco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmrcnmc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmrcprs.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmrcpsp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmrdeap.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmrdevl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmrimco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmrlfac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmrpsri.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmtligp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmvamar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmactpa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmbasrp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmcpafc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmctras.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmcudis.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmdicom.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmgrtur.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmctcp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmgrutu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmhacul.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmhncdi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmmapos.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmmemgr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmmohoe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmmotco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmperan.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmprctl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmpreui.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmprtpu2.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmrcuen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmpacar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmparfs.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmrecir.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudAcrepor.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmrersw.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmresfa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmrnocc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKNmrproa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmsubcc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmsuspg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmtaral.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmtargp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmtipno.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmtopem.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacactiv.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacjefep.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacnivel.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacorgan.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacpaesc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacpamaf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacpaorg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacmreno.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacprepe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacprere.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacproce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacrequi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacrpeca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacsemaf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKactipca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKactipla.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKactipro.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKacsproc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosAc\CrudKtiprg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiacarg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiactem.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbianiv2.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiarbol.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbidecla.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbidotca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiedfor.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiednfo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiemple.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiIncar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiemtal.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbihincr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbivlisc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiexame.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbifamil.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiendot.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiparbi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbigruim.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbihcarg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbicargo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiaumca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbicarpe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbicladi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbidocum.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\crudKbiempdo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbientpr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbicarpr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiDatad.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbievalu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbifacto.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbihsidi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbihvext.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbilisch.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbimaefe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbimaetf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbimdeju.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbimodac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbipaend.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbipaprd.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiparam.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiplred.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiprend.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiPrepd.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiprodi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiregdi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbirendo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiroles.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbisolqu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\CrudKbiunesp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpacumu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpbeoto.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpbeven.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpbevfa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpcenva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpconeq.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpdequi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpdidep.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpentid.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpmopre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpmovAc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpmzrce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpparam.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbppceva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpracev.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbprecev.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbprecon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbppresu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbprotbe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbptipev.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKbpvenre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBp\CrudKBpMapre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosCo\CrudKcoacmej.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosCo\CrudKcoencue.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosCo\CrudKcoconen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosCo\CrudKcoescal.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosCo\CrudKcoparam.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosCo\CrudKcorencu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosCo\CrudKcovaria.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEc\CrudKecrubro.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\ClasePrueba.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3ccom.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3crol.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3esca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3evex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3item.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3lica.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3licc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3para.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3perf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3rcop.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3rela.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3teva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKed3tiev.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKedeseva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosEd\CrudKedpmapt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdarcon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdcurso.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfddisre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdentid.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdencer.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdfactu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfditeva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdlicev.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdlogis.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdnefor.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdpadic.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdparam.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdpgene.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdplanf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdplcur.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdpresu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosCo\CrudKcorcoen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdparge.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdprogr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdrconc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdrepfd.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdsesio.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdtcapa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGd\CrudKgdpecab.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGd\CrudKgdpemai.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGd\CrudKgdpemve.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGd\CrudKgdtiacc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGe\CrudKgebscar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGe\CrudKgecpeor.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGe\CrudKgeindic.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnarbol.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnccost.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgncorde.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgndefsd.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgndrepo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnefluj.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnempre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnflujo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgngusua.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnhabda.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnhttse.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnktabl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnmodul.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnmoned.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnmseri.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnnotas.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnpaise.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnpatag.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnpaweb.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnpbcaj.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnpergu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnperma.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnpplad.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnprogr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnreusc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnrperm.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnrpsut.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnsclav.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgntempr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnterce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnpapai.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgntexpr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgntipcc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgntmarc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnuempr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnusuar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnutlap.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnwayud.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnwgrup.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnwebse.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnwprog.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKNmLinomFake.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGw\CrudKgwparam.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosIG\CrudKigindic.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgninfno.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgninfsc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosGn\CrudKgnmarno.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosIG\CrudKiglindi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosIG\CrudKiglvari.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosIG\CrudKigvaria.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmparco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmparhe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmparic.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmparpu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmparre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpasox.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpbper.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdrpcap.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmorpre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosCo\CrudKcopcoen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmpacei.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosFd\CrudKfdprcco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmpamde.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmautod.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmcomis.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmcompe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmconar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmconbp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmconce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmconch.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmconhe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmconva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmcopri.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmctaco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmctinc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmctpre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmctrap.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmctrch.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmctrre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmctrel.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmctres.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmcuent.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmdacon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmdcado.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmdconc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmdeman.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmdesdo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmncdis.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmncipr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmncmco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmncrcc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmcvcon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmdestu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmdane.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmdeja.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmlsec.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmpcar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmpfac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmplca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmreti.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmrvac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmncrte.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmnored.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmnosde.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmnosld.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmdisev.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmdisno.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmause.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmboni.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmmcsri.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmnoved.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmnovss.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmnovte.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmnovtu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmpacad.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmpaemb.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmpahex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmpadia.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmpadis.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmparam.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmparei.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmpares.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmpainc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmparen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm\CrudKnmrango.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmdefsp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpabon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmncmov.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpapar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpasso.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpcate.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpcert.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpcesa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpcoti.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpdpre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpcomp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpectr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmparme.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmparsi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmperio.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpespe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpheem.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpinde.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmplaca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpledu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmplent.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmplipr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmplsox.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmparin.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpmupc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpocof.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpoyca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmppr23.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpr23m.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmprant.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmprcco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpreac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpread.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpreau.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpasup.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpavac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpazys.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpreco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmprecc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmPrepa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmprima.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmproar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmprold.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpretr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmpropa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmprorr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmprova.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmranre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmrardp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmrcctu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmretce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmrevac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmacarb.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmajuss.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmdmovs.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmdncmo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmdnprb.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmdrdoc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmembar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmexvac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmgenca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmgprot.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmgrutr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmhconc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmhcuen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmheliq.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmhemva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmhreli.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmjuzga.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmliyca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmpsege.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmrecpr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmresce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmdefin.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmpcare.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmpreno.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmprgco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmprovs.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmrcnar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmrcret.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmrtpro.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsanci.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsande.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsapco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmprein.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsimin.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsapic.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsolce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsoltr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsouvr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsrott.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsupag.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsurel.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmsusce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmtargp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmtipce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmtipex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmtipsi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmtnomi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmtprot.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmtucac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmturno.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmturtr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmunest.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmvalpe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmviaes.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmvicar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_3\CrudKnmviesc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmaumge.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmausen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmcaidf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmcamoi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmcaphe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmcarco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmcarex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmctpli.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmdiasn.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmdisrf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmejpro.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmentid.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmescar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmestmi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmetsen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmfopev.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmempgt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmhenti.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmhextr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmgacon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmhorne.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmhrsox.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmhsuel.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmhteda.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmicimf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmhicco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmhictp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmicimp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmidret.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmindem.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmingre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmliaps.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmlices.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmlinom.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmlipri.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmliprs.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmliqde.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmliqss.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmmceti.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmmovse.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmncico.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmncric.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmpcoti.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmprecr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmpstct.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmrdncc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmremba.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmrprov.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmrptva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmrvape.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmvante.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmvmail.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmacdis.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmacenc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmacinr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmacten.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmadmpr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmaplde.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmappin.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmaredo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmarpaz.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmasniv.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmaucau.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmbasir.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmbasli.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmbasre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmbasva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmbatie.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmbecon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmdaaum.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmcinct.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmecopr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmgdpre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmhfare.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmbenes.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmbepro.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmbeupc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmbsavi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmcamid.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmcamji.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmecsri.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmhisac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmadane.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmcarel.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmcarnt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmcoips.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmbasld.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmincap.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmacadm.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmccxcb.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmcenca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmliqre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmlivac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmhdeco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmnccon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmpahex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmparss.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_6\CrudKnmpispt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmplina.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmprvig.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrcaun.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrcert.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrcomn.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrepse.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmreugp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrevld.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrinfc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmriret.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrlidd.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrlide.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrliss.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrliva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrnoce.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrpacd.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrpara.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmsegvi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmvacac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmvacli.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmponov.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmproac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmracmc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmracom.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmracum.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrpdos.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_5\CrudKnmrrepa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmbasrb.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmbensf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmcunid.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmdiafa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmdifin.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmdlict.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmemrec.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmgirte.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmgopsi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmhpass.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmlaumt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmldifa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmlssec.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmmcmac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmmcpar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmmcsop.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmmctic.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmmples.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmmreld.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcaban.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmcesen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmeasig.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmmaptu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmparab.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmaspro.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmCaaut.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmcacon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmChegi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmDhodo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmcendo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmdasig.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmdfado.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmdhono.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmenoat.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmlnfsi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKNmMfpre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmpaheg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmpargt.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmpaupc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmpcodo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmpcota.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmphoex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmpreai.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmprehi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmprtpa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKNmPples.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKNmPreUl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKNmPrsru.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKNmPrtpu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmranma.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKNmRevli.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmrrucc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmtarif.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmuccos.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmvaria.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmvarig.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmvicap.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPe\CrudKpectlim.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPe\CrudKpeperco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnfopep.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnconpg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpncppen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnhissm.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKngrtur.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmfapar.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_9\CrudKnmfirse.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnentcp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_7\CrudKnmopsif.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPe\CrudKpecerti.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPe\CrudKpenotic.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnmapen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnmruaf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnnorua.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnpcidi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnpcinf.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnpenti.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosPn\CrudKpnplrua.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlarexp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlarint.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrledfor.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlednfo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlempdo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlemple.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlemtal.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlentid.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlfamil.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlhvext.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlmedio.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlmotre.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlmotso.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlparrl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlrhvex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosRl\CrudKrlwregi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslarxcc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKSlAcuer.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKSlAdmcb.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslareas.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKSlCride.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKSlEtapa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKSlJurad.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKSlJurex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKSlMreec.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslninha.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslpacof.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKSlPrueb.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslpvalh.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslrcapr.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslrccom.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKSlRecla.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslconas.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslequrm.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslgrsel.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslinsel.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslinsrp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslkitin.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslmetap.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslmprue.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslparsl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslpresu.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslreqpe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslriaco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKslselca.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKsltacwb.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSl\CrudKsltrada.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoclrie.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsosalpe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoactin.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsogiate.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoadpmc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsopamal.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsopsubp.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsorcaus.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoriinc.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoagles.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoanvln.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsocodia.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsocompa.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoconpe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsocovac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoepact.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoespec.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoevccs.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoexpos.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsofueex.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsograve.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsohicli.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoiamen.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoindic.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoinfac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoinhsg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoaceri.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoactiv.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoareas.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoconse.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoefepo.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsomaobs.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsomasim.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsomaleg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsomedco.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsomatrl.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsonatle.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsonivde.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsonivri.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsopanev.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoparam.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsopcafe.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoplaem.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoproba.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoprogi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsorcvot.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoresol.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoresst.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsosalud.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoseyde.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsotcomi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoticon.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoohabi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsopcont.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsotipac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsotipin.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsotiprg.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsotipse.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsotipva.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoubifi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsovamed.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsovulne.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudKsoviepi.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo\CrudSosalud.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosSo_2\CrudKsorevac.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosTl\CrudKtldifor.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesGlobales.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesMTOM\AdjuntarArchivos.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesMTOM\SmartPeopleMTOM.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesGlobalesProcesos\FuncionesProcesosGlobales.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesoKAcNoved\FuncionesKAcNoved.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesoKNmLices\FuncionesKNmLices.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesoKNmLivac\FuncionesKNmLivac.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesosIncap\FuncionesProcesosIncap.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesosKGnAlert\FuncionesKGnAlert.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesosKNmAusen\FuncionesProcesosKNmAusen.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesosKNmEmbar\FuncionesProcesosNmEmbar.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesosKNmLinoe\FuncionesKNmLinoe.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesosKNmNoved\FuncionesProcesosKNmNoved.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesosKNmProac\FuncionesProcesosKNmProac.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesProcesos\FuncionesProcesosLinom\FuncionesProcesosLinom.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesRolAuditor\PreliminarGlobal.cs" />
+    <Compile Include="AFuncionesGlobales\FuncionesVitales.cs" />
+    <Compile Include="AFuncionesGlobales\GlobalFuncAux\FuncionesGlobalesAux_1.cs" />
+    <Compile Include="AFuncionesGlobales\MultiAssert.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosBi\crudKbitipso.cs" />
+    <Compile Include="AFuncionesGlobales\newFunctionsAppium\newFunctions_1.cs" />
+    <Compile Include="AFuncionesGlobales\newFunctionsAppium\newFunctions_2.cs" />
+    <Compile Include="AFuncionesGlobales\newFunctionsAppium\newFunctions_3.cs" />
+    <Compile Include="AFuncionesGlobales\newFunctionsAppium\newFunctions_4.cs" />
+    <Compile Include="AFuncionesGlobales\newFunctionsAppium\newFunctions_5.cs" />
+    <Compile Include="AFuncionesGlobales\newFunctionsAppium\PruebaCRUD.cs" />
+    <Compile Include="AFuncionesGlobales\newFunctionsAppium\PruebaImagenText.cs" />
+    <Compile Include="AFuncionesGlobales\ParamHelper.cs" />
+    <Compile Include="AFuncionesGlobales\SqlAdapter.cs" />
+    <Compile Include="AFuncionesGlobales\TestCaseJSON.cs" />
+    <Compile Include="AFuncionesGlobales\ValidacionQueries\ValidacionesQueries.cs" />
+    <Compile Include="Connected Services\KGnSmenw2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SmenwErrores\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SmenWSp105\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SmenwSPEnv2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SmenwSPEnv3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SmenwSPEnv4\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SmenwSPEnv5\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\SmenwSPEnv\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Procesos\ModulosGlobalesProcesos\ModulosGlobales.cs" />
+    <Compile Include="Procesos\ProcesoKNmAusen\ModuloProcesoKNmAusen.cs" />
+    <Compile Include="Procesos\ProcesoKNmEmbar\ModuloProcesosKNmEmbar.cs" />
+    <Compile Include="Procesos\ProcesoKNmIncap\ModulosProcesoIncap.cs" />
+    <Compile Include="Procesos\ProcesoKAcNoved\ModulosProcesoKAcNoved.cs" />
+    <Compile Include="Procesos\ProcesoKGnAlert\ModulosProcesoKGnAlert.cs" />
+    <Compile Include="Procesos\ProcesoKNmLices\ModulosProcesoKNmLices.cs" />
+    <Compile Include="Procesos\ProcesoKNmLinoe\ModulosProcesoKNmLinoe.cs" />
+    <Compile Include="Procesos\ProcesoKNmLipri\ModuloProcesoKNmLipri.cs" />
+    <Compile Include="Procesos\ProcesoKNmLivac\ModulosProcesoKNmLivac.cs" />
+    <Compile Include="Procesos\ProcesoKNmNoved\ModuloProcesosKNmNoved.cs" />
+    <Compile Include="Procesos\ProcesoKNmProac\ModulosProcesosKNmProac.cs" />
+    <Compile Include="Procesos\ProcesosLinom\ModuloProcesoLinom.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestMethods\ModulosAC\ModulosAC_4.cs" />
+    <Compile Include="TestMethods\ModulosAC\ModulosAC_1.cs" />
+    <Compile Include="TestMethods\ModulosAC\ModulosAC_3.cs" />
+    <Compile Include="TestMethods\ModulosAC\ModulosAC_5.cs" />
+    <Compile Include="TestMethods\ModulosAC\ModulosAC_6.cs" />
+    <Compile Include="TestMethods\ModulosAC\ModulosAC_7.cs" />
+    <Compile Include="TestMethods\ModulosAC\ModulosAC_8.cs" />
+    <Compile Include="TestMethods\ModulosAC\ModulosAC_9.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_1.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_10.cs" />
+    <Compile Include="TestMethods\ModulosAC\ModulosAC_2.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_11.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_12.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_13.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_14.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_15.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_7.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_2.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_3.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_4.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_5.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_6.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_8.cs" />
+    <Compile Include="TestMethods\ModulosBI\ModulosBi_9.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_1.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_10.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_12.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_14.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_3.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_2.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_4.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_5.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_6.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_7.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_8.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_9.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_11.cs" />
+    <Compile Include="TestMethods\ModulosBP\ModulosBP_13.cs" />
+    <Compile Include="TestMethods\ModulosCO\ModulosCO_3.cs" />
+    <Compile Include="TestMethods\ModulosCO\ModulosCO_4.cs" />
+    <Compile Include="TestMethods\ModulosCO\ModulosCO_5.cs" />
+    <Compile Include="TestMethods\ModulosCO\ModulosCO_6.cs" />
+    <Compile Include="TestMethods\ModulosCO\ModulosCO_7.cs" />
+    <Compile Include="TestMethods\ModulosEC\ModulosEC_1.cs" />
+    <Compile Include="TestMethods\ModulosED\ModulosED_1.cs" />
+    <Compile Include="TestMethods\ModulosED\ModulosED_10.cs" />
+    <Compile Include="TestMethods\ModulosED\ModulosED_2.cs" />
+    <Compile Include="TestMethods\ModulosED\ModulosED_3.cs" />
+    <Compile Include="TestMethods\ModulosED\ModulosED_4.cs" />
+    <Compile Include="TestMethods\ModulosED\ModulosED_5.cs" />
+    <Compile Include="TestMethods\ModulosED\ModulosED_6.cs" />
+    <Compile Include="TestMethods\ModulosED\ModulosED_7.cs" />
+    <Compile Include="TestMethods\ModulosED\ModulosED_8.cs" />
+    <Compile Include="TestMethods\ModulosED\ModulosED_9.cs" />
+    <Compile Include="TestMethods\ModulosFD\ModulosFD_3.cs" />
+    <Compile Include="TestMethods\ModulosFD\ModulosFD_5.cs" />
+    <Compile Include="TestMethods\ModulosFD\ModulosFD_4.cs" />
+    <Compile Include="TestMethods\ModulosFD\ModulosFD_6.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_2\CrudKnmrpcos.cs" />
+    <Compile Include="TestMethods\ModulosFD\ModulosFD_7.cs" />
+    <Compile Include="TestMethods\ModulosFD\ModulosFD_8.cs" />
+    <Compile Include="TestMethods\ModulosFD\ModulosFD_9.cs" />
+    <Compile Include="TestMethods\ModulosGD\ModulosGD_1.cs" />
+    <Compile Include="TestMethods\ModulosGD\ModulosGD_2.cs" />
+    <Compile Include="TestMethods\ModulosGD\ModulosGD_3.cs" />
+    <Compile Include="TestMethods\ModulosGD\ModulosGD_4.cs" />
+    <Compile Include="TestMethods\ModulosGD\ModulosGD_5.cs" />
+    <Compile Include="TestMethods\ModulosGE\ModulosGE_1.cs" />
+    <Compile Include="TestMethods\ModulosGE\ModulosGE_2.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_1.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_10.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_11.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_12.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_13.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_14.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_15.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_16.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_17.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_18.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_2.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_3.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_4.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_5.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_6.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_7.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_8.cs" />
+    <Compile Include="TestMethods\ModulosGN\ModulosGN_9.cs" />
+    <Compile Include="TestMethods\ModulosGW\ModulosGW_1.cs" />
+    <Compile Include="TestMethods\ModulosIG\ModulosIG_1.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_4\CrudKnmhgpro.cs" />
+    <Compile Include="TestMethods\ModulosIG\ModulosIG_2.cs" />
+    <Compile Include="TestMethods\ModulosMTOM\ModulosMTOM.cs" />
+    <Compile Include="TestMethods\ModulosNM\CrudKnmaacum.cs" />
+    <Compile Include="AFuncionesGlobales\CRUDProgramas\ModulosNm_8\CrudKnmhdise.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_100.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_101.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_102.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_103.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_104.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_105.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_106.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_107.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_108.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_113.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_114.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_115.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_116.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_117.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_118.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_120.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_121.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_122.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_123.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_125.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_127.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_129.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_131.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_132.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_134.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_136.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNm_137.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_77.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_16.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_17.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_18.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_19.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_21.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_20.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_22.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_23.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_24.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_25.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_26.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_27.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_28.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_29.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_30.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_31.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_32.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_33.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_34.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_35.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_36.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_37.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_38.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_39.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_40.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_41.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_42.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_43.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_44.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_45.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_46.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_47.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_48.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_49.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_50.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_51.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_52.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_53.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_54.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_55.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_56.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_57.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_58.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_59.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_60.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_61.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_62.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_63.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_64.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_65.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_66.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_68.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNm_69.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_70.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_71.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_75.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_73.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNm_74.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_76.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_78.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_80.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNm_81.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_84.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_79.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNm_82.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_83.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_85.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_86.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_87.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_88.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_89.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_9.cs" />
+    <Compile Include="TestMethods\ModulosCO\ModulosCO_2.cs" />
+    <Compile Include="TestMethods\ModulosFD\ModulosFD_2.cs" />
+    <Compile Include="TestMethods\ModulosCO\ModulosCO_1.cs" />
+    <Compile Include="TestMethods\ModulosFD\ModulosFD_1.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNm-1.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_10.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_12.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_13.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_11.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_14.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_15.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_2.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_3.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNm_4.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_5.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_6.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_7.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_8.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_67.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_72.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_90.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_91.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_92.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_93.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_94.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_95.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_96.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_97.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_98.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_99.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_109.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_110.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_111.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_119.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_124.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_126.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_128.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_133.cs" />
+    <Compile Include="TestMethods\ModulosNM\ModulosNM_135.cs" />
+    <Compile Include="TestMethods\ModulosPE\ModulosPE_1.cs" />
+    <Compile Include="TestMethods\ModulosPE\ModulosPE_2.cs" />
+    <Compile Include="TestMethods\ModulosPE\ModulosPE_3.cs" />
+    <Compile Include="TestMethods\ModulosPN\ModulosPN_1.cs" />
+    <Compile Include="TestMethods\ModulosPN\ModulosPN_2.cs" />
+    <Compile Include="TestMethods\ModulosPN\ModulosPN_3.cs" />
+    <Compile Include="TestMethods\ModulosRL\ModulosRL_1.cs" />
+    <Compile Include="TestMethods\ModulosRL\ModulosRL_2.cs" />
+    <Compile Include="TestMethods\ModulosRL\ModulosRL_3.cs" />
+    <Compile Include="TestMethods\ModulosRL\ModulosRL_4.cs" />
+    <Compile Include="TestMethods\ModulosRL\ModulosRL_5.cs" />
+    <Compile Include="TestMethods\ModulosRL\ModulosRL_6.cs" />
+    <Compile Include="TestMethods\ModulosRolAuditor\ModulosRolAuditor.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_1.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_10.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_2.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_3.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_4.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_5.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_6.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_7.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_8.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_9.cs" />
+    <Compile Include="TestMethods\ModulosSL\ModulosSL_11.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_1.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_10.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_11.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_12.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_13.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_14.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_15.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_16.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_18.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_4.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_2.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_3.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_5.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_6.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_7.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_8.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_9.cs" />
+    <Compile Include="TestMethods\ModulosServicePack\ModulosSP.cs" />
+    <Compile Include="TestMethods\ModulosSO\ModulosSO_17.cs" />
+    <Compile Include="TestMethods\ModulosTL\ModulosTL_1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\KGnSmenw2\KGnSmenw.wsdl" />
+    <None Include="Connected Services\KGnSmenw2\KGnSmenw.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KGnSmenw2\KGnSmenw1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KGnSmenw2\KGnSmenw2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KGnSmenw2\KGnSmenwWCF.wsdl" />
+    <None Include="Connected Services\KGnSmenw2\Ophelia_Test_V21.KGnSmenw2.AS_ApplyUpdatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KGnSmenw2\Ophelia_Test_V21.KGnSmenw2.AS_ExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KGnSmenw2\Ophelia_Test_V21.KGnSmenw2.AS_GetParamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KGnSmenw2\Ophelia_Test_V21.KGnSmenw2.AS_GetRecordsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KGnSmenw2\Ophelia_Test_V21.KGnSmenw2.AS_RowRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KGnSmenw2\Ophelia_Test_V21.KGnSmenw2.ExecRemoteFunctionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwErrores\KGnSmenw.wsdl" />
+    <None Include="Connected Services\SmenwErrores\KGnSmenw.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwErrores\KGnSmenw1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwErrores\KGnSmenw2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwErrores\KGnSmenwWCF.wsdl" />
+    <None Include="Connected Services\SmenwErrores\Ophelia_Test_V21.SmenwErrores.AS_ApplyUpdatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwErrores\Ophelia_Test_V21.SmenwErrores.AS_ExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwErrores\Ophelia_Test_V21.SmenwErrores.AS_GetParamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwErrores\Ophelia_Test_V21.SmenwErrores.AS_GetRecordsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwErrores\Ophelia_Test_V21.SmenwErrores.AS_RowRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwErrores\Ophelia_Test_V21.SmenwErrores.ExecRemoteFunctionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenWSp105\KGnSmenwWCF1.wsdl" />
+    <None Include="Connected Services\SmenWSp105\Ophelia_Test_V21.SmenWSp105.AS_ApplyUpdatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenWSp105\Ophelia_Test_V21.SmenWSp105.AS_ExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenWSp105\Ophelia_Test_V21.SmenWSp105.AS_GetParamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenWSp105\Ophelia_Test_V21.SmenWSp105.AS_GetRecordsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenWSp105\Ophelia_Test_V21.SmenWSp105.AS_RowRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenWSp105\Ophelia_Test_V21.SmenWSp105.ExecRemoteFunctionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv2\KGnSmenw1.wsdl" />
+    <None Include="Connected Services\SmenwSPEnv2\KGnSmenw3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv2\KGnSmenw31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv2\KGnSmenw32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv2\KGnSmenwWCF1.wsdl" />
+    <None Include="Connected Services\SmenwSPEnv2\Ophelia_Test_V21.SmenwSPEnv2.AS_ApplyUpdatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv2\Ophelia_Test_V21.SmenwSPEnv2.AS_ExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv2\Ophelia_Test_V21.SmenwSPEnv2.AS_GetParamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv2\Ophelia_Test_V21.SmenwSPEnv2.AS_GetRecordsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv2\Ophelia_Test_V21.SmenwSPEnv2.AS_RowRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv2\Ophelia_Test_V21.SmenwSPEnv2.ExecRemoteFunctionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv3\KGnSmenw1.wsdl" />
+    <None Include="Connected Services\SmenwSPEnv3\KGnSmenw3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv3\KGnSmenw31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv3\KGnSmenw32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv3\KGnSmenwWCF1.wsdl" />
+    <None Include="Connected Services\SmenwSPEnv3\Ophelia_Test_V21.SmenwSPEnv3.AS_ApplyUpdatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv3\Ophelia_Test_V21.SmenwSPEnv3.AS_ExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv3\Ophelia_Test_V21.SmenwSPEnv3.AS_GetParamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv3\Ophelia_Test_V21.SmenwSPEnv3.AS_GetRecordsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv3\Ophelia_Test_V21.SmenwSPEnv3.AS_RowRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv3\Ophelia_Test_V21.SmenwSPEnv3.ExecRemoteFunctionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv4\KGnSmenw.wsdl" />
+    <None Include="Connected Services\SmenwSPEnv4\KGnSmenw.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv4\KGnSmenw1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv4\KGnSmenw2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv4\KGnSmenwWCF.wsdl" />
+    <None Include="Connected Services\SmenwSPEnv4\Ophelia_Test_V21.SmenwSPEnv4.AS_ApplyUpdatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv4\Ophelia_Test_V21.SmenwSPEnv4.AS_ExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv4\Ophelia_Test_V21.SmenwSPEnv4.AS_GetParamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv4\Ophelia_Test_V21.SmenwSPEnv4.AS_GetRecordsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv4\Ophelia_Test_V21.SmenwSPEnv4.AS_RowRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv4\Ophelia_Test_V21.SmenwSPEnv4.ExecRemoteFunctionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv5\KGnSmenw.wsdl" />
+    <None Include="Connected Services\SmenwSPEnv5\KGnSmenw.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv5\KGnSmenw1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv5\KGnSmenw2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv5\KGnSmenwWCF.wsdl" />
+    <None Include="Connected Services\SmenwSPEnv5\Ophelia_Test_V21.SmenwSPEnv5.AS_ApplyUpdatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv5\Ophelia_Test_V21.SmenwSPEnv5.AS_ExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv5\Ophelia_Test_V21.SmenwSPEnv5.AS_GetParamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv5\Ophelia_Test_V21.SmenwSPEnv5.AS_GetRecordsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv5\Ophelia_Test_V21.SmenwSPEnv5.AS_RowRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv5\Ophelia_Test_V21.SmenwSPEnv5.ExecRemoteFunctionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv\KGnSmenw1.wsdl" />
+    <None Include="Connected Services\SmenwSPEnv\KGnSmenw3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv\KGnSmenw31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv\KGnSmenw32.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv\KGnSmenwWCF1.wsdl" />
+    <None Include="Connected Services\SmenwSPEnv\Ophelia_Test_V21.SmenwSPEnv.AS_ApplyUpdatesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv\Ophelia_Test_V21.SmenwSPEnv.AS_ExecuteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv\Ophelia_Test_V21.SmenwSPEnv.AS_GetParamsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv\Ophelia_Test_V21.SmenwSPEnv.AS_GetRecordsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv\Ophelia_Test_V21.SmenwSPEnv.AS_RowRequestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SmenwSPEnv\Ophelia_Test_V21.SmenwSPEnv.ExecRemoteFunctionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="data.csv" />
+    <None Include="packages.config" />
+    <None Include="Yaml\ktest1.yaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\KGnSmenw2\" />
+    <WCFMetadataStorage Include="Connected Services\SmenwErrores\" />
+    <WCFMetadataStorage Include="Connected Services\SmenWSp105\" />
+    <WCFMetadataStorage Include="Connected Services\SmenwSPEnv2\" />
+    <WCFMetadataStorage Include="Connected Services\SmenwSPEnv3\" />
+    <WCFMetadataStorage Include="Connected Services\SmenwSPEnv4\" />
+    <WCFMetadataStorage Include="Connected Services\SmenwSPEnv5\" />
+    <WCFMetadataStorage Include="Connected Services\SmenwSPEnv\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KGnSmenw2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KGnSmenw2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KGnSmenw2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenWSp105\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenWSp105\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenWSp105\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv2\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv2\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv3\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv3\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv3\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv4\KGnSmenw.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv4\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv4\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv4\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv3\KGnSmenw.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\KGnSmenw2\KGnSmenw.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv2\KGnSmenw1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwErrores\KGnSmenw.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwErrores\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwErrores\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwErrores\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv\KGnSmenw1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv5\KGnSmenw.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv5\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv5\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\SmenwSPEnv5\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets')" />
+</Project>

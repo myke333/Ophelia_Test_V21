@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://kactus" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="KGnSmenwWCF" targetNamespace="http://kactus" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IKGnSmenwWCF_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IKGnSmenwWCF_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="345600000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://kactus" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xs:element name="AS_ApplyUpdates">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Delta" nillable="true" type="xs:anyType" />
+            <xs:element minOccurs="0" name="MaxErrors" type="xs:int" />
+            <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_ApplyUpdatesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AS_ApplyUpdatesResult" nillable="true" type="xs:anyType" />
+            <xs:element minOccurs="0" name="ErrorCount" type="xs:int" />
+            <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_GetRecords">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Count" type="xs:int" />
+            <xs:element minOccurs="0" name="Options" type="xs:int" />
+            <xs:element minOccurs="0" name="CommandText" nillable="true" type="xs:string" />
+            <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q1:ArrayOfanyType" />
+            <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_GetRecordsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AS_GetRecordsResult" nillable="true" type="xs:anyType" />
+            <xs:element minOccurs="0" name="RecsOut" type="xs:int" />
+            <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q2:ArrayOfanyType" />
+            <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_DataRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+            <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Data" nillable="true" type="q3:ArrayOfanyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_DataRequestResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AS_DataRequestResult" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_GetProviderNames">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_GetProviderNamesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AS_GetProviderNamesResult" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_GetParams">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_GetParamsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AS_GetParamsResult" nillable="true" type="xs:anyType" />
+            <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_RowRequest">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Row" nillable="true" type="xs:anyType" />
+            <xs:element minOccurs="0" name="RequestType" type="xs:int" />
+            <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_RowRequestResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="AS_RowRequestResult" nillable="true" type="xs:anyType" />
+            <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_Execute">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProviderName" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="CommandText" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="Params" nillable="true" type="xs:anyType" />
+            <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AS_ExecuteResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="Params" nillable="true" type="xs:anyType" />
+            <xs:element minOccurs="0" name="OwnerData" nillable="true" type="xs:anyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExecRemoteFunction">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="pStMetodo" nillable="true" type="xs:string" />
+            <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDataIn" nillable="true" type="q4:ArrayOfanyType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="ExecRemoteFunctionResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ExecRemoteFunctionResult" type="xs:int" />
+            <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pDataOut" nillable="true" type="q5:ArrayOfanyType" />
+            <xs:element minOccurs="0" name="pStError" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/Arrays" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ArrayOfanyType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" type="xs:anyType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfanyType" nillable="true" type="tns:ArrayOfanyType" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IKGnSmenwWCF_AS_ApplyUpdates_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_ApplyUpdates" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_ApplyUpdates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_ApplyUpdatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetRecords" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_DataRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_DataRequest" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_DataRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_DataRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetProviderNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetProviderNames" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetProviderNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetProviderNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetParams_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetParams" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_GetParams_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_GetParamsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_RowRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_RowRequest" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_RowRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_RowRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_Execute_InputMessage">
+    <wsdl:part name="parameters" element="tns:AS_Execute" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_AS_Execute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AS_ExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_ExecRemoteFunction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecRemoteFunction" />
+  </wsdl:message>
+  <wsdl:message name="IKGnSmenwWCF_ExecRemoteFunction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecRemoteFunctionResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IKGnSmenwWCF">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_ApplyUpdates">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_ApplyUpdates" message="tns:IKGnSmenwWCF_AS_ApplyUpdates_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_ApplyUpdatesResponse" message="tns:IKGnSmenwWCF_AS_ApplyUpdates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_GetRecords">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetRecords" message="tns:IKGnSmenwWCF_AS_GetRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetRecordsResponse" message="tns:IKGnSmenwWCF_AS_GetRecords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_DataRequest">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_DataRequest" message="tns:IKGnSmenwWCF_AS_DataRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_DataRequestResponse" message="tns:IKGnSmenwWCF_AS_DataRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_GetProviderNames">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetProviderNames" message="tns:IKGnSmenwWCF_AS_GetProviderNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetProviderNamesResponse" message="tns:IKGnSmenwWCF_AS_GetProviderNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_GetParams">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetParams" message="tns:IKGnSmenwWCF_AS_GetParams_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_GetParamsResponse" message="tns:IKGnSmenwWCF_AS_GetParams_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_RowRequest">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_RowRequest" message="tns:IKGnSmenwWCF_AS_RowRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_RowRequestResponse" message="tns:IKGnSmenwWCF_AS_RowRequest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AS_Execute">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/AS_Execute" message="tns:IKGnSmenwWCF_AS_Execute_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/AS_ExecuteResponse" message="tns:IKGnSmenwWCF_AS_Execute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ExecRemoteFunction">
+      <wsdl:input wsaw:Action="http://kactus/IKGnSmenwWCF/ExecRemoteFunction" message="tns:IKGnSmenwWCF_ExecRemoteFunction_InputMessage" />
+      <wsdl:output wsaw:Action="http://kactus/IKGnSmenwWCF/ExecRemoteFunctionResponse" message="tns:IKGnSmenwWCF_ExecRemoteFunction_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IKGnSmenwWCF" type="tns:IKGnSmenwWCF">
+    <wsp:PolicyReference URI="#NetTcpBinding_IKGnSmenwWCF_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="AS_ApplyUpdates">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_ApplyUpdates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_GetRecords">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_GetRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_DataRequest">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_DataRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_GetProviderNames">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_GetProviderNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_GetParams">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_GetParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_RowRequest">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_RowRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_Execute">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_Execute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecRemoteFunction">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/ExecRemoteFunction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSHttpBinding_IKGnSmenwWCF" type="tns:IKGnSmenwWCF">
+    <wsp:PolicyReference URI="#WSHttpBinding_IKGnSmenwWCF_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AS_ApplyUpdates">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_ApplyUpdates" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_GetRecords">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_GetRecords" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_DataRequest">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_DataRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_GetProviderNames">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_GetProviderNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_GetParams">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_GetParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_RowRequest">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_RowRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AS_Execute">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/AS_Execute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecRemoteFunction">
+      <soap12:operation soapAction="http://kactus/IKGnSmenwWCF/ExecRemoteFunction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="KGnSmenwWCF">
+    <wsdl:port name="NetTcpBinding_IKGnSmenwWCF" binding="tns:NetTcpBinding_IKGnSmenwWCF">
+      <soap12:address location="net.tcp://batman/Kactus/KactusCoreServices/KGnSmenw.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://batman/Kactus/KactusCoreServices/KGnSmenw.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="WSHttpBinding_IKGnSmenwWCF" binding="tns:WSHttpBinding_IKGnSmenwWCF">
+      <soap12:address location="http://batman:8080/Kactus/KactusCoreServices/KGnSmenw.svc/ws" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://batman:8080/Kactus/KactusCoreServices/KGnSmenw.svc/ws</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

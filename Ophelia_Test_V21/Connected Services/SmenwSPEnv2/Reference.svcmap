@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c0f1c430-579a-4199-a6aa-012fc86f0c31" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://dwktest:8080/Kactus/KactusCoreServices/kgnsmenw.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="KGnSmenw1.wsdl" MetadataType="Wsdl" ID="e961576a-bf77-4e01-b5ca-b23d9b6277b5" SourceId="1" SourceUrl="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="KGnSmenwWCF1.wsdl" MetadataType="Wsdl" ID="f48005c2-5e82-4e40-a25e-d2bfcdb0c253" SourceId="1" SourceUrl="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?wsdl" />
+    <MetadataFile FileName="KGnSmenw3.xsd" MetadataType="Schema" ID="b77d1f31-4496-42a2-a5a4-c6ea6e6e4377" SourceId="1" SourceUrl="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?xsd=xsd0" />
+    <MetadataFile FileName="KGnSmenw1.disco" MetadataType="Disco" ID="a3eeeeb4-9972-4fbd-94f1-ef1ee37a55de" SourceId="1" SourceUrl="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?disco" />
+    <MetadataFile FileName="KGnSmenw31.xsd" MetadataType="Schema" ID="da2fbd81-7d54-40df-89b1-14624a970a88" SourceId="1" SourceUrl="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?xsd=xsd2" />
+    <MetadataFile FileName="KGnSmenw32.xsd" MetadataType="Schema" ID="21feb61e-4a8c-4cae-82e7-ecce93e94cb6" SourceId="1" SourceUrl="http://dwktest.digitalware.com.co:8080/Kactus/KactusCoreServices/KGnSmenw.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
